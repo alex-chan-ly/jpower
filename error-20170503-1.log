@@ -1,0 +1,280 @@
+May 03, 2017 4:28:21 PM com.google.api.client.googleapis.auth.oauth2.OAuth2Utils runningOnComputeEngine
+WARNING: Failed to detect whether we are running on Google Compute Engine.
+com.google.api.client.http.HttpResponseException: 403 Forbidden
+<HTML>
+<Body>
+<table width="100%" height="100%" border="0">
+	<tr>
+	<td align="center">
+	<table>
+		<tr>
+		 <td width="850" valign="Top" align="left">
+		 <div style="text-align: justify;">
+		  <font color="#000000" size="3" face="Arial, Helvetica, sans-serif"><b>
+		  The Website you are attempting to access is blocked in line with HSBC policy<br>
+		  <br>
+		  Should you require access for business purposes instructions on how you can apply can be found <b><a
+href="https://team.global.hsbc/sites/IAAM/IAMHK/Shared%20Documents/Access%20Management/Access%20Mgt%20-%20Procedure%20and%20Forms/Procedure%20for%20website%20access%20(IAM).pdf" title="Exception
+Request Process">-HERE-</a>.</b><br>
+		  <br>
+		  To complete your access request please note the website category as - none<br>
+		  <br>
+		  Please be advised internet usage is monitored and logged in line with HSBC Policy.<br>
+		  <br>
+		  </font>
+		 </div>
+		 </td>
+		</tr>
+		<tr>
+		 <td width="850" valign="top" align ="left">
+		  <div style="text-align: justify;">
+		   <font color="#C6C6C6" size="2" face="Arial, Helvetica, sans-serif">
+		   <br>For IT use only: Proxy= HKTKOGDCBG302 | User= HBAP\43873962 | IP address= 10.209.123.237 | URL= http://169.254.169.254/ | Time=
+Wed, 03-May-17 08:28:21 GMT
+		   </font>
+		  </div>
+		 </td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+</table>
+</body>
+</html>
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1070)
+	at com.google.api.client.googleapis.auth.oauth2.OAuth2Utils.runningOnComputeEngine(OAuth2Utils.java:86)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.detectEnvironment(DefaultCredentialProvider.java:183)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.getDefaultCredentialUnsynchronized(DefaultCredentialProvider.java:110)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.getDefaultCredential(DefaultCredentialProvider.java:91)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:213)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:191)
+	at com.google.cloud.dataflow.sdk.util.Credentials.getCredential(Credentials.java:122)
+	at com.google.cloud.dataflow.sdk.util.GcpCredentialFactory.getCredential(GcpCredentialFactory.java:43)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:263)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:253)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy29.getGcpCredential(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.Transport.newStorageClient(Transport.java:175)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:95)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:83)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy16.getGcsUtil(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.verifyPathIsAccessible(DataflowPathValidator.java:80)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.validateOutputFilePrefixSupported(DataflowPathValidator.java:63)
+	at com.google.cloud.dataflow.sdk.runners.DataflowPipelineRunner.fromOptions(DataflowPipelineRunner.java:274)
+	at com.google.cloud.dataflow.sdk.runners.BlockingDataflowPipelineRunner.fromOptions(BlockingDataflowPipelineRunner.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.buildFromMethod(InstanceBuilder.java:223)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.build(InstanceBuilder.java:163)
+	at com.google.cloud.dataflow.sdk.runners.PipelineRunner.fromOptions(PipelineRunner.java:58)
+	at com.google.cloud.dataflow.sdk.Pipeline.create(Pipeline.java:135)
+	at com.google.cloud.dataflow.examples.WordCount.main(WordCount.java:195)
+
+May 03, 2017 4:28:21 PM com.google.api.client.googleapis.auth.oauth2.OAuth2Utils runningOnComputeEngine
+WARNING: Failed to detect whether we are running on Google Compute Engine.
+com.google.api.client.http.HttpResponseException: 403 Forbidden
+<HTML>
+<Body>
+<table width="100%" height="100%" border="0">
+	<tr>
+	<td align="center">
+	<table>
+		<tr>
+		 <td width="850" valign="Top" align="left">
+		 <div style="text-align: justify;">
+		  <font color="#000000" size="3" face="Arial, Helvetica, sans-serif"><b>
+		  The Website you are attempting to access is blocked in line with HSBC policy<br>
+		  <br>
+		  Should you require access for business purposes instructions on how you can apply can be found <b><a
+href="https://team.global.hsbc/sites/IAAM/IAMHK/Shared%20Documents/Access%20Management/Access%20Mgt%20-%20Procedure%20and%20Forms/Procedure%20for%20website%20access%20(IAM).pdf" title="Exception
+Request Process">-HERE-</a>.</b><br>
+		  <br>
+		  To complete your access request please note the website category as - none<br>
+		  <br>
+		  Please be advised internet usage is monitored and logged in line with HSBC Policy.<br>
+		  <br>
+		  </font>
+		 </div>
+		 </td>
+		</tr>
+		<tr>
+		 <td width="850" valign="top" align ="left">
+		  <div style="text-align: justify;">
+		   <font color="#C6C6C6" size="2" face="Arial, Helvetica, sans-serif">
+		   <br>For IT use only: Proxy= HKTKOGDCBG302 | User= HBAP\43873962 | IP address= 10.209.123.237 | URL= http://169.254.169.254/ | Time=
+Wed, 03-May-17 08:28:21 GMT
+		   </font>
+		  </div>
+		 </td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+</table>
+</body>
+</html>
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1070)
+	at com.google.api.client.googleapis.auth.oauth2.OAuth2Utils.runningOnComputeEngine(OAuth2Utils.java:86)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.detectEnvironment(DefaultCredentialProvider.java:183)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.getDefaultCredentialUnsynchronized(DefaultCredentialProvider.java:110)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.getDefaultCredential(DefaultCredentialProvider.java:91)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:213)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:191)
+	at com.google.cloud.dataflow.sdk.util.Credentials.getCredential(Credentials.java:122)
+	at com.google.cloud.dataflow.sdk.util.GcpCredentialFactory.getCredential(GcpCredentialFactory.java:43)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:263)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:253)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy29.getGcpCredential(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.Transport.newStorageClient(Transport.java:175)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:95)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:83)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy16.getGcsUtil(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.verifyPathIsAccessible(DataflowPathValidator.java:80)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.validateOutputFilePrefixSupported(DataflowPathValidator.java:63)
+	at com.google.cloud.dataflow.sdk.runners.DataflowPipelineRunner.fromOptions(DataflowPipelineRunner.java:274)
+	at com.google.cloud.dataflow.sdk.runners.BlockingDataflowPipelineRunner.fromOptions(BlockingDataflowPipelineRunner.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.buildFromMethod(InstanceBuilder.java:223)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.build(InstanceBuilder.java:163)
+	at com.google.cloud.dataflow.sdk.runners.PipelineRunner.fromOptions(PipelineRunner.java:58)
+	at com.google.cloud.dataflow.sdk.Pipeline.create(Pipeline.java:135)
+	at com.google.cloud.dataflow.examples.WordCount.main(WordCount.java:195)
+
+May 03, 2017 4:28:21 PM com.google.api.client.googleapis.auth.oauth2.OAuth2Utils runningOnComputeEngine
+WARNING: Failed to detect whether we are running on Google Compute Engine.
+com.google.api.client.http.HttpResponseException: 403 Forbidden
+<HTML>
+<Body>
+<table width="100%" height="100%" border="0">
+	<tr>
+	<td align="center">
+	<table>
+		<tr>
+		 <td width="850" valign="Top" align="left">
+		 <div style="text-align: justify;">
+		  <font color="#000000" size="3" face="Arial, Helvetica, sans-serif"><b>
+		  The Website you are attempting to access is blocked in line with HSBC policy<br>
+		  <br>
+		  Should you require access for business purposes instructions on how you can apply can be found <b><a
+href="https://team.global.hsbc/sites/IAAM/IAMHK/Shared%20Documents/Access%20Management/Access%20Mgt%20-%20Procedure%20and%20Forms/Procedure%20for%20website%20access%20(IAM).pdf" title="Exception
+Request Process">-HERE-</a>.</b><br>
+		  <br>
+		  To complete your access request please note the website category as - none<br>
+		  <br>
+		  Please be advised internet usage is monitored and logged in line with HSBC Policy.<br>
+		  <br>
+		  </font>
+		 </div>
+		 </td>
+		</tr>
+		<tr>
+		 <td width="850" valign="top" align ="left">
+		  <div style="text-align: justify;">
+		   <font color="#C6C6C6" size="2" face="Arial, Helvetica, sans-serif">
+		   <br>For IT use only: Proxy= HKTKOGDCBG302 | User= HBAP\43873962 | IP address= 10.209.123.237 | URL= http://169.254.169.254/ | Time=
+Wed, 03-May-17 08:28:21 GMT
+		   </font>
+		  </div>
+		 </td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+</table>
+</body>
+</html>
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1070)
+	at com.google.api.client.googleapis.auth.oauth2.OAuth2Utils.runningOnComputeEngine(OAuth2Utils.java:86)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.detectEnvironment(DefaultCredentialProvider.java:183)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.getDefaultCredentialUnsynchronized(DefaultCredentialProvider.java:110)
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.getDefaultCredential(DefaultCredentialProvider.java:91)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:213)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:191)
+	at com.google.cloud.dataflow.sdk.util.Credentials.getCredential(Credentials.java:122)
+	at com.google.cloud.dataflow.sdk.util.GcpCredentialFactory.getCredential(GcpCredentialFactory.java:43)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:263)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:253)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy29.getGcpCredential(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.Transport.newStorageClient(Transport.java:175)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:95)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:83)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy16.getGcsUtil(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.verifyPathIsAccessible(DataflowPathValidator.java:80)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.validateOutputFilePrefixSupported(DataflowPathValidator.java:63)
+	at com.google.cloud.dataflow.sdk.runners.DataflowPipelineRunner.fromOptions(DataflowPipelineRunner.java:274)
+	at com.google.cloud.dataflow.sdk.runners.BlockingDataflowPipelineRunner.fromOptions(BlockingDataflowPipelineRunner.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.buildFromMethod(InstanceBuilder.java:223)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.build(InstanceBuilder.java:163)
+	at com.google.cloud.dataflow.sdk.runners.PipelineRunner.fromOptions(PipelineRunner.java:58)
+	at com.google.cloud.dataflow.sdk.Pipeline.create(Pipeline.java:135)
+	at com.google.cloud.dataflow.examples.WordCount.main(WordCount.java:195)
+
+Exception in thread "main" java.lang.RuntimeException: Failed to construct instance from factory method BlockingDataflowPipelineRunner#fromOptions(interface com.google.cloud.dataflow.sdk.options.PipelineOptions)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.buildFromMethod(InstanceBuilder.java:234)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.build(InstanceBuilder.java:163)
+	at com.google.cloud.dataflow.sdk.runners.PipelineRunner.fromOptions(PipelineRunner.java:58)
+	at com.google.cloud.dataflow.sdk.Pipeline.create(Pipeline.java:135)
+	at com.google.cloud.dataflow.examples.WordCount.main(WordCount.java:195)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.InstanceBuilder.buildFromMethod(InstanceBuilder.java:223)
+	... 4 more
+Caused by: java.lang.RuntimeException: Unable to get application default credentials. Please see https://developers.google.com/accounts/docs/application-default-credentials for details on how to specify credentials. This version of the SDK is dependent on the gcloud core component version 2015.02.05 or newer to be able to get credentials from the currently authorized user via gcloud auth.
+	at com.google.cloud.dataflow.sdk.util.Credentials.getCredential(Credentials.java:124)
+	at com.google.cloud.dataflow.sdk.util.GcpCredentialFactory.getCredential(GcpCredentialFactory.java:43)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:263)
+	at com.google.cloud.dataflow.sdk.options.GcpOptions$GcpUserCredentialsFactory.create(GcpOptions.java:253)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy29.getGcpCredential(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.Transport.newStorageClient(Transport.java:175)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:95)
+	at com.google.cloud.dataflow.sdk.util.GcsUtil$GcsUtilFactory.create(GcsUtil.java:83)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.returnDefaultHelper(ProxyInvocationHandler.java:609)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.getDefault(ProxyInvocationHandler.java:550)
+	at com.google.cloud.dataflow.sdk.options.ProxyInvocationHandler.invoke(ProxyInvocationHandler.java:163)
+	at com.sun.proxy.$Proxy16.getGcsUtil(Unknown Source)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.verifyPathIsAccessible(DataflowPathValidator.java:80)
+	at com.google.cloud.dataflow.sdk.util.DataflowPathValidator.validateOutputFilePrefixSupported(DataflowPathValidator.java:63)
+	at com.google.cloud.dataflow.sdk.runners.DataflowPipelineRunner.fromOptions(DataflowPipelineRunner.java:274)
+	at com.google.cloud.dataflow.sdk.runners.BlockingDataflowPipelineRunner.fromOptions(BlockingDataflowPipelineRunner.java:82)
+	... 9 more
+Caused by: java.io.IOException: The Application Default Credentials are not available. They are available if running on Google App Engine, Google Compute Engine, or Google Cloud Shell. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
+	at com.google.api.client.googleapis.auth.oauth2.DefaultCredentialProvider.getDefaultCredential(DefaultCredentialProvider.java:98)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:213)
+	at com.google.api.client.googleapis.auth.oauth2.GoogleCredential.getApplicationDefault(GoogleCredential.java:191)
+	at com.google.cloud.dataflow.sdk.util.Credentials.getCredential(Credentials.java:122)
+	... 27 more
