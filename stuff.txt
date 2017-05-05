@@ -1,0 +1,101 @@
+Examples - Apache Beam
+https://github.com/apache/beam - beam-master.tar
+https://www.talend.com/blog/2016/08/26/apache-beam-in-action-same-code-several-execution-engines/
+https://sookocheff.com/post/beam/writing-a-beam-sink/
+http://blog.madhukaraphatak.com/introduction-to-flink-streaming-part-8/
+
+====================================================================
+keytool -importcert -trustcacerts -file C:\_alexc\_projects\_newInitiative\_allCloudBig\_gcp\_git\googleapi-certs -alias googleapi_alias -keystore C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts
+
+proxy server : intpxy1.hk.hsbc:8080
+
+set GOOGLE_APPLICATION_CREDENTIALS=C:\_alexc\_projects\_newInitiative\_allCloudBig\_gcp\_git\My-Project-d3b31085ee62.json
+set JAVA_FLAGS=-Dhttp.proxyHost=intpxy1.hk.hsbc -Dhttp.proxyPort=8080 -Dhttp.proxyUser=HBAP\43873962 -Dhttp.proxyPassword=xxxxx -Djavax.net.ssl.trustStore=C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts -Djavax.net.ssl.trustStorePassword=43873962
+                                  -Dhttp.proxyHost=intpxy1.hk.hsbc -Dhttp.proxyPort=8080 -Dhttp.proxyUser=HBAP\43873962 -Dhttp.proxyPassword=xxxx -Djavax.net.ssl.trustStore=C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts -Djavax.net.ssl.trustStorePassword=43873962
+
+
+set JAVA_FLAGS=-Djavax.net.ssl.trustStore=C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts -Djavax.net.ssl.trustStorePassword=43873962 -Dhttp.proxyHost=intpxy1.hk.hsbc -Dhttp.proxyPort=8080 -Dhttps.proxyHost=intpxy1.hk.hsbc -Dhttps.proxyPort=8080 
+								  
+#set JAVA_FLAGS=-Dhttp.proxyHost=intpxy1.hk.hsbc -Dhttp.proxyPort=8080 -Djavax.net.ssl.trustStore=C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts -Djavax.net.ssl.trustStorePassword=43873962								 
+# java %JAVA_FLAGS% Main
+# return OK
+
+#set JAVA_FLAGS=-Dhttp.proxyHost=uk-proxy-01.systems.uk.hsbc -Dhttp.proxyPort=80 -Djavax.net.ssl.trustStore=C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts -Djavax.net.ssl.trustStorePassword=43873962								 
+# java %JAVA_FLAGS% Main
+# return OK
+					
+
+#set JAVA_FLAGS=-Dhttp.proxyHost=intpxy1.hk.hsbc -Dhttp.proxyPort=8080 -Djavax.net.ssl.trustStore=C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts -Djavax.net.ssl.trustStorePassword=43873962								 
+# java %JAVA_FLAGS% -cp google-cloud-dataflow-java-examples-all-bundled-0.0.1-EXAMPLES.jar;google-cloud-dataflow-java-examples-all-0.0.1-EXAMPLES.jar;.  com.google.cloud.dataflow.examples.WordCount --project=rational-clock-164414 --stagingLocation=gs://store-dataflow/staging/ --runner=BlockingDataflowPipelineRunner > error-20170502.log 2>&1
+#return  com.google.cloud.hadoop.util.ResilientOperation nextSleep
+
+					
+java %JAVA_FLAGS% -cp google-cloud-dataflow-java-examples-all-bundled-0.0.1-EXAMPLES.jar;google-cloud-dataflow-java-examples-all-0.0.1-EXAMPLES.jar;.  com.google.cloud.dataflow.examples.WordCount --project=rational-clock-164414 --stagingLocation=gs://store-dataflow/staging/ --runner=BlockingDataflowPipelineRunner > error-20170502.log 2>&1
+
+================================
+Case 1 
+if JAVA_FLAGS =-Djavax.net.ssl.trustStore=C:\util\Java\jdk1.8.0_25\jre\lib\security\cacerts -Djavax.net.ssl.trustStorePassword=43873962 -Dhttp.proxyHost=intpxy1.hk.hsbc -Dhttp.proxyPort=8080 -Dhttps.proxyHost=intpxy1.hk.hsbc -Dhttps.proxyPort=8080
+C:\_alexc\_projects\_newInitiative\_allCloudBig\_gcp\_git>java %JAVA_FLAGS% Main1 http://www.google.com
+http://www.google.com
+200 : OK
+true
+proxy hostname : HTTP
+proxy hostname : intpxy1.hk.hsbc
+proxy port : 8080
+##############################
+C:\_alexc\_projects\_newInitiative\_allCloudBig\_gcp\_git>java %JAVA_FLAGS% Main1 https://www.google.com
+https://www.google.com
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.fatal(Unknown Source)
+        at sun.security.ssl.Handshaker.fatalSE(Unknown Source)
+        at sun.security.ssl.Handshaker.fatalSE(Unknown Source)
+        at sun.security.ssl.ClientHandshaker.serverCertificate(Unknown Source)
+        at sun.security.ssl.ClientHandshaker.processMessage(Unknown Source)
+        at sun.security.ssl.Handshaker.processLoop(Unknown Source)
+        at sun.security.ssl.Handshaker.process_record(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+        at sun.net.www.protocol.https.HttpsClient.afterConnect(Unknown Source)
+        at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+        at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+        at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+        at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+        at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(Unknown Source)
+        at Main1.main(Main1.java:23)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderEx
+ception: unable to find valid certification path to requested target
+        at sun.security.validator.PKIXValidator.doBuild(Unknown Source)
+        at sun.security.validator.PKIXValidator.engineValidate(Unknown Source)
+        at sun.security.validator.Validator.validate(Unknown Source)
+        at sun.security.ssl.X509TrustManagerImpl.validate(Unknown Source)
+        at sun.security.ssl.X509TrustManagerImpl.checkTrusted(Unknown Source)
+        at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(Unknown Source)
+        ... 15 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at sun.security.provider.certpath.SunCertPathBuilder.build(Unknown Source)
+        at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(Unknown Source)
+        at java.security.cert.CertPathBuilder.build(Unknown Source)
+        ... 21 more
+false
+proxy hostname : HTTP
+proxy hostname : intpxy1.hk.hsbc
+proxy port : 8080
+=======================================
+C:\_alexc\_projects\_newInitiative\_allCloudBig\_gcp\_git>java %JAVA_FLAGS% Main1 http://www.googleapis.com
+http://www.googleapis.com
+404 : Not Found
+false
+proxy hostname : HTTP
+proxy hostname : intpxy1.hk.hsbc
+proxy port : 8080
+
+C:\_alexc\_projects\_newInitiative\_allCloudBig\_gcp\_git>java %JAVA_FLAGS% Main1 https://www.googleapis.com
+https://www.googleapis.com
+404 : Not Found
+false
+proxy hostname : HTTP
+proxy hostname : intpxy1.hk.hsbc
+proxy port : 8080
