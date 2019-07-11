@@ -1,1 +1,0 @@
-http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-windows.html
